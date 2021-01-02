@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background: linear-gradient(to right, rgb(214, 75, 75) 0%, rgb(76, 117, 230) 100%);
+}
+
+.calc {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.output {
+    padding: 0.625rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.preveus-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.curent-operand {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+@media (max-width: 565px) {
+    .calc {
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: minmax(105px, auto) repeat(5, 75px);
+    }
+}
